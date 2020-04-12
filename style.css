@@ -1,0 +1,314 @@
+@font-face {
+  src: url(GameofThrones.ttf);
+  font-family: "got";
+}
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.bg {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bg:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(25, 61, 82, 0.568);
+}
+
+.bg .blur {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: rotateY(180deg);
+  filter: blur(8px);
+}
+
+.icons {
+  width: 100%;
+  position: absolute;
+  top: 10px;
+  left: 0;
+  height: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.icons a {
+  cursor: pointer;
+}
+
+.icons .fa {
+  font-size: 30px;
+  margin: 25px;
+  color: gray;
+  position: relative;
+  z-index: 999;
+}
+
+.icons .fa::after {
+  content: "";
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  top: 50%;
+  left: 50%;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  z-index: -5;
+}
+
+.icons a:nth-child(1) {
+  margin: 0 auto 0 15px;
+}
+
+.main {
+  position: relative;
+  left: 0;
+  width: 75vw;
+  height: 70vh;
+  z-index: 100;
+}
+
+.main:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  z-index: -5;
+  border-radius: 10px;
+}
+
+.main .bg {
+  transform: rotateY(180deg);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  border-radius: 10px;
+  z-index: -5;
+}
+
+.navbar {
+  position: relative;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 80px;
+  margin: 10px 0 0 0;
+}
+
+.bars {
+  width: 50px;
+  height: 50px;
+  position: relative;
+  top: 15px;
+  left: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.bars span {
+  width: 13px;
+  height: 2px;
+  background-color: white;
+  position: relative;
+}
+
+.bars span:before {
+  content: "";
+  position: absolute;
+  top: -7px;
+  left: 0;
+  width: 20px;
+  height: 2px;
+  background-color: white;
+}
+
+.bars span:after {
+  content: "";
+  position: absolute;
+  bottom: -7px;
+  left: 0;
+  width: 20px;
+  height: 2px;
+  background-color: white;
+}
+
+.navbar ul {
+  width: 50%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.navbar ul li {
+  list-style: none;
+  padding: 0 10px;
+}
+
+.navbar .first li:nth-child(1) {
+  margin: 0 50px 0 15px;
+}
+
+.main .logo img {
+  width: 130px;
+  height: 40px;
+  filter: blur(0px);
+}
+
+.navbar ul li a,
+.second li:nth-child(3) {
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0 15px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+.second {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-right: 50px;
+}
+
+.second li {
+  padding: 0 10px;
+  margin: 0 12px;
+  color: white;
+  cursor: pointer;
+}
+
+.second i {
+  font-size: 20px;
+}
+
+.fa-bell {
+  position: relative;
+}
+
+.fa-bell::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: red;
+}
+
+.me {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+.info {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  margin: 100px 0 0 100px;
+}
+
+.info h4,
+.info h5 {
+  color: white;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+.info h1 {
+  font-family: got;
+  font-size: 60px;
+  font-weight: lighter;
+  color: white;
+  letter-spacing: 10px;
+  margin: 0;
+  width: 20vw;
+  line-height: 85px;
+}
+
+.info h1 span {
+  font-size: 20px;
+  position: relative;
+  top: -20px;
+}
+
+.info .buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.buttons .btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  width: 200px;
+  height: 41px;
+  border-radius: 5px;
+  color: white;
+  margin: 0 20px;
+  cursor: pointer;
+}
+
+.btn:nth-child(1) {
+  background-color: red;
+  border: none;
+  margin-left: 0;
+}
+
+.btn:nth-child(2) {
+  background-color: rgba(0, 0, 0, 0.5);
+  border: none;
+}
+
+.btn p {
+  font-size: 14px;
+  margin: 0 0 0 8px;
+}
+
+.btn .fa-caret-right {
+  font-size: 16px;
+}
+
+.btn .fa-chevron-down {
+  background-color: rgba(0, 0, 0, 0.3);
+  width: 20px;
+  padding: 1.04em 0.4em;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  position: relative;
+  top: 0;
+  left: 50px;
+}
